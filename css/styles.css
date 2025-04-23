@@ -7,11 +7,20 @@
   --gradient: linear-gradient(135deg, #33d35e 0%, #2ab6d9 99.58%);
 }
 
-/* Fonts */
+/* FONT-FACE */
 @font-face {
   font-family: "Public Sans";
-  src: url("../practis/fonts/PublicSans-Regular.woff2") format("woff2"),
-      url("../practis/fonts/PublicSans-Regular.woff") format("woff");
+  src: url("../fonts/PublicSans-Medium.woff2") format("woff2"),
+    url("../fonts/PublicSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Regular.woff2") format("woff2"),
+    url("../fonts/PublicSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,18 +28,9 @@
 
 @font-face {
   font-family: "Public Sans";
-  src: url("../practis/fonts/PublicSans-Thin.woff2") format("woff2"),
-      url("../practis/fonts/PublicSans-Thin.woff") format("woff");
+  src: url("../fonts/PublicSans-Thin.woff2") format("woff2"),
+    url("../fonts/PublicSans-Thin.woff") format("woff");
   font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Public Sans";
-  src: url("../practis/fonts/PublicSans-Medium.woff2") format("woff2"),
-      url("../practis/fonts/PublicSans-Medium.woff") format("woff");
-  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -187,6 +187,69 @@ select:-webkit-autofill:focus {
   justify-content: space-between;
 }
 
+/* ARTICLES-GRID */
+.article-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-left: -30px;
+  list-style: none;
+}
+.article-cards-grid__item {
+  width: 100%;
+  max-width: 255px;
+  margin-left: 30px;
+}
+/* ARTICLE-CARD */
+.article-card {
+  border-radius: 5px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.article-card__img {
+  display: block;
+  width: 255px;
+  height: 200px;
+  object-fit: cover;
+}
+.article-card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+}
+.article-card__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 100;
+
+}
+.article-card__link {
+  display: inline-block;
+  color: var(--black);
+  text-decoration: none;
+}
+.article-card__link:hover {
+  color: var(--green);
+}
+.article-card__link:active {
+  opacity: 0.6;
+}
+.article-card__auther {
+  order: -1;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 10px;
+  line-height: 18px;
+}
+.article-card__axcerpt {
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+}
 
 /* BUTTON */
 .button {
@@ -304,7 +367,6 @@ select:-webkit-autofill:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   width: 72px;
   height: 72px;
   margin-bottom: 40px;
@@ -333,6 +395,20 @@ select:-webkit-autofill:focus {
 .feature__description {
   margin: 0;
 }
+
+/* INDEX-ARTICLES */
+.index-articles {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.index-articles__title {
+  margin-top: 0;
+  font-size: 40px;
+  line-height: 64px;
+  margin-bottom: 40px;
+  font-weight: 100;
+}
+
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
